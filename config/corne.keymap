@@ -72,6 +72,7 @@
   &none        &none        &none        &none        &none    &none  &none  &none  &none  &none 
  &none        &none        &none        &none        &none    &none  &none  &none  &none  &none  
                                     &none        &none        &none    &none  &none  &none
+                >;
                 };
 
                 extra_2 {
