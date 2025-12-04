@@ -65,9 +65,9 @@
                 };
 
                         OSRS {
-            display-name = "Raise";
+            display-name = "OSRS";
             bindings = <
-  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5    &tog 0  &none  &none  &none  &none  
+  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5    &tog 3  &none  &none  &none  &none  
   &none        &none        &none        &none        &none    &none  &none  &none  &none  &none 
  &none        &none        &none        &none        &none    &none  &none  &none  &none  &none  
                                     &none        &none        &none    &none  &none  &none
