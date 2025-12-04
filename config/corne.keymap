@@ -9,23 +9,13 @@
 #include <dt-bindings/zmk/bt.h>
 
 
-#define AS(keycode) &as LS(keycode) keycode
 
 / {
     chosen {
         zmk,physical-layout = &foostan_corne_5col_layout;
     };
 
-    behaviors {
-        as: auto_shift {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping_term_ms = <200>;
-            quick_tap_ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-        };
-    };
+
         keymap {
                 compatible = "zmk,keymap";
 
@@ -37,10 +27,10 @@
 //             | GUI | LWR | SPC |     | ENT | RSE  | BSPC |
                         display-name = "Base";
                         bindings = <
-   AS(Q) AS(W) AS(E) AS(R) AS(T)     AS(Y)   AS(U)  AS(I)     AS(O)     AS(P)
-   AS(A) AS(S) AS(D) AS(F) AS(G)     AS(H)   AS(J)  AS(K)     AS(L)     AS(SQT)
-   AS(Z) AS(X) AS(C) AS(V) AS(B)     AS(N)   AS(M)  &kp LCTL  &kp RALT  AS(DOT)
-        &kp LGUI &mo 1 &kp SPACE     AS(RET) &mo 2  &kp BSPC
+ &kp Q  &kp W  &kp E      &kp R  &kp T        &kp Y    &kp U  &kp I          &kp O    &kp P         
+ &kp A  &kp S  &kp D      &kp F  &kp G        &kp H    &kp J  &kp K          &kp L    &kp LBKT      
+ &kp Z  &kp X  &kp C      &kp V  &kp B        &kp N    &kp M  &kp SEMI       &kp SQT  &kp KP_COMMA  
+                     &sk LSHFT  &mo 2  &kp SPACE    &kp RET  &mo 1  &kp BACKSPACE
                         >;
                 };
 
@@ -52,10 +42,10 @@
 //               | GUI |     | SPC |     | ENT | ESC | TAB |
                         display-name = "Lower";
                         bindings = <
-   &kp EXCL     &kp AT       &kp HASH     &kp DLLR     &kp PRCNT        &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR  &kp RPAR
-   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4     &kp LEFT  &kp DOWN  &kp UP          &kp RIGHT &trans 
-   &bt BT_CLR   &trans       &trans       &trans       &trans           &trans    &trans    &trans          &trans    &trans 
-                             &kp LGUI     &trans       &kp SPACE        AS(RET)   &kp ESC   &kp TAB
+  &kp PLUS         &kp MINUS      &kp ASTRK    &kp SLASH         &kp BACKSLASH        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp KP_NUMBER_7    &kp KP_NUMBER_8  &kp KP_NUMBER_9  
+  &kp EXCLAMATION  &kp QUESTION   &kp PIPE     &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp KP_NUMBER_4    &kp KP_NUMBER_5  &kp KP_NUMBER_6  
+  &kp EQUAL        &kp AMPERSAND  &kp AT_SIGN  &kp HASH          &kp PERCENT          &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp KP_NUMBER_1    &kp KP_NUMBER_2  &kp KP_NUMBER_3  
+                                       &kp TAB      &none             &kp SPACE            &kp RET               &kp N0                 &kp LC(BACKSPACE)
                         >;
                 };
 
@@ -68,15 +58,20 @@
                         display-name = "Raise";
                         bindings = <
 
-   AS(N1)    AS(N2)    AS(N3)    AS(N4)    AS(N5)        AS(N6)    AS(N7)    AS(N8)    AS(N9)   AS(N0)
-   AS(MINUS) AS(EQUAL) &kp LBRC  &kp LBKT  &kp LPAR      &kp RPAR  &kp RBKT  &kp RBRC  AS(FSLH) AS(BSLH)
-   AS(GRAVE) &trans    &trans    AS(COMMA) &kp COLON     &kp SEMI  AS(DOT)   &kp LCTRL &kp RALT &trans
-                       &kp LGUI  &kp ESC   &kp SPACE     AS(RET)   &trans    &kp TAB
+  &none       &kp UP     &none         &none      &none        &none         &none         &kp C_VOL_UP   &none         &none         
+  &kp LEFT    &kp DOWN   &kp RIGHT     &none      &none        &none         &kp HOME      &kp C_VOL_DN   &kp END       &none         
+  &kp DELETE  &kp LC(A)  &kp LC(C)     &kp LC(V)  &kp LG(D)    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3  &bt BT_SEL 4 
+                              &kp LEFT_GUI  &tog 3     &kp SPACE    &kp RET       &none         &kp BACKSPACE
                         >;
                 };
 
-                extra_1 {
-                        status = "reserved";
+                        OSRS {
+            display-name = "Raise";
+            bindings = <
+  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5    &tog 0  &none  &none  &none  &none  
+  &none        &none        &none        &none        &none    &none  &none  &none  &none  &none  
+ &none        &none        &none        &none        &none    &none  &none  &none  &none  &none  
+                                    &none        &none        &none    &none  &none  &none
                 };
 
                 extra_2 {
