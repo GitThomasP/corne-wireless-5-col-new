@@ -9,7 +9,9 @@
 #include <dt-bindings/zmk/bt.h>
 #include <behaviors/unicode.dtsi>
 
-
+&uc {
+  default-mode = <UC_MODE_WIN_COMPOSE>;  // Replace with desired input system.
+};
 
 / {
     chosen {
@@ -65,10 +67,6 @@
             bindings = <&kp LG(D)>;
         };
     };
-
-    &uc {
-  default-mode = <UC_MODE_WIN_COMPOSE>;  // Replace with desired input system.
-};
 
 
         keymap {
