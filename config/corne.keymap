@@ -80,7 +80,7 @@
         comma_dot: comma_dot {
             compatible = "zmk,behavior-hold-tap";
             label = "CommaDot";
-            #binding-cells = <0>;
+            #binding-cells = <2>;
             tapping-term-ms = <200>;         // adjust if needed
             flavor = "tap-preferred";        // tap = comma
             bindings = <&key_comma &key_period>;
@@ -88,7 +88,7 @@
         dash_underscore: dash_underscore {
             compatible = "zmk,behavior-hold-tap";
             label = "DashUnderscore";
-            #binding-cells = <0>;
+            #binding-cells = <2>;
             tapping-term-ms = <200>;     // adjust to taste
             flavor = "tap-preferred";    // tap outputs dash
             bindings = <&key_dash &key_underscore>;
