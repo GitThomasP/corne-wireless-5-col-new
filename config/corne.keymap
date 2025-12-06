@@ -16,24 +16,20 @@
     };
 
      behaviors {
-            type_unicode: type_unicode {
-            compatible = "zmk,behavior-type-unicode";
-            label = "TypeUnicode";
-            #binding-cells = <1>;
-        };
         mm_ae: mm_ae {
-            compatible = "zmk,behavior-mod-morph";
-            bindings = <&type_unicode 0x00E6>, <&type_unicode 0x00C6>; // æ / Æ
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&unicode 0x00E6>, <&unicode 0x00C6>; // æ / Æ
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+};
         mm_oe: mm_oe {
             compatible = "zmk,behavior-mod-morph";
-            bindings = <&type_unicode 0x00F8>, <&type_unicode 0x00D8>; // ø / Ø
+            bindings = <&unicode 0x00F8>, <&unicode 0x00D8>; // ø / Ø
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         mm_aa: mm_aa {
             compatible = "zmk,behavior-mod-morph";
-            bindings = <&type_unicode 0x00E5>, <&type_unicode 0x00C5>; // å / Å
+            bindings = <&unicode 0x00E5>, <&unicode 0x00C5>; // å / Å
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         comma_dot: comma_dot {
