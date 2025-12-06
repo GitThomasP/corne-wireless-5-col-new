@@ -7,6 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <behaviors/unicode.dtsi>
 
 
 
@@ -16,22 +17,7 @@
     };
 
      behaviors {
-        mm_ae: mm_ae {
-    compatible = "zmk,behavior-mod-morph";
-    #binding-cells = <0>;
-    bindings = <&unicode 0x00E6>, <&unicode 0x00C6>; // æ / Æ
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-};
-        mm_oe: mm_oe {
-            compatible = "zmk,behavior-mod-morph";
-            bindings = <&unicode 0x00F8>, <&unicode 0x00D8>; // ø / Ø
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        mm_aa: mm_aa {
-            compatible = "zmk,behavior-mod-morph";
-            bindings = <&unicode 0x00E5>, <&unicode 0x00C5>; // å / Å
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
+
         comma_dot: comma_dot {
             compatible = "zmk,behavior-hold-tap";
             label = "CommaDot";
@@ -93,8 +79,8 @@
                         display-name = "Base";
                         bindings = <
  &kp Q  &kp W  &kp E      &kp R  &kp T        &kp Y    &kp U  &kp I          &kp O    &kp P         
- &kp A  &kp S  &kp D      &kp F  &kp G        &kp H    &kp J  &kp K          &kp L    &mm_aa      
- &kp Z  &kp X  &kp C      &kp V  &kp B        &kp N    &kp M  &mm_ae       &mm_oe  &comma_dot
+ &kp A  &kp S  &kp D      &kp F  &kp G        &kp H    &kp J  &kp K          &kp L    &uc 0xE5 0xC5    
+ &kp Z  &kp X  &kp C      &kp V  &kp B        &kp N    &kp M  &uc 0xE6 0xC6       &uc 0xF8 0xD8   &comma_dot
                      &sk LSHFT  &mo 2  &kp SPACE    &kp RET  &mo 1  &kp BACKSPACE
                         >;
                 };
