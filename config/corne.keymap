@@ -47,6 +47,36 @@
             flavor = "tap-preferred";    // tap outputs dash
             bindings = <&kp MINUS>, <&kp UNDERSCORE>;
         };
+        ctrl_c: ctrl_c {
+            label = "CtrlC";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(C)>;
+        };
+        ctrl_v: ctrl_v {
+            label = "CtrlV";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(V)>;
+        };
+        ctrl_a: ctrl_a {
+            label = "CtrlA";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(A)>;
+        };
+        ctrl_s: ctrl_s {
+            label = "CtrlS";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(S)>;
+        };
+        win_d: win_d {
+            label = "WinD";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(D)>;
+        };
     };
 
 
@@ -77,8 +107,8 @@
                         display-name = "Lower";
                         bindings = <
   &none       &kp UP     &none         &none      &LA(TAB)        &none         &none         &none   &none         &none         
-  &kp LEFT    &kp DOWN   &kp RIGHT     &none      &kp LC(S)       &none         &none      &none   &none       &none         
-  &kp DELETE  &kp LC(A)  &kp LC(C)     &kp LC(V)  &kp LG(D)    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3  &bt BT_SEL 4 
+  &kp LEFT    &kp DOWN   &kp RIGHT     &none      &ctrl_s       &none         &none      &none   &none       &none         
+  &kp DELETE  &ctrl_a  &ctrl_c     &ctrl_v  &win_d    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3  &bt BT_SEL 4 
                               &kp LEFT_GUI  &tog 3     &kp SPACE    &kp RET       &none         &kp LSHFT
                         >;
                 };
