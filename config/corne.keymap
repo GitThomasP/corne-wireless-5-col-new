@@ -89,7 +89,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;         // adjust if needed
             flavor = "tap-preferred";        // tap = comma
-            bindings = <&key_comma &key_period>;
+            bindings = <&key_period &key_comma>;
         };
         dash_underscore: dash_underscore {
             compatible = "zmk,behavior-hold-tap";
@@ -97,7 +97,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;     // adjust to taste
             flavor = "tap-preferred";    // tap outputs dash
-            bindings = <&key_dash &key_underscore>;
+            bindings = <&key_underscore &key_dash>;
         };
     };
 
@@ -122,10 +122,10 @@
 
                 lower_layer {
 // -----------------------------------------------------------------------------------------
-// | !     |  @  |  #  |  $  |  %  |     |  ^  |  &  |  *  |  (  |  )  |
-// | BT1   | BT2 | BT3 | BT4 | BT5 |     | LFT | DWN |  UP | RGT |     |
-// | BTCLR |     |     |     |     |     |     |     |     |     |     |
-//               | GUI |     | SPC |     | ENT | ESC | TAB |
+//| ___ |  ↑  | ___ | RAlt |  Tab |   BT0  |   BT1  |   BT2  |   BT3  |   BT4  |
+//|  ←  |  ↓  |  →  | ___  | Ctrl-S |  ___ |  ___ |  ___ |  ___ |  ___ |
+//| Del | Ctrl-A | Ctrl-C | Ctrl-V | Win-D | Win-L | ___ | ___ | ___ | ___ |
+//                    | GUI | TOG3 | Space | Enter | ___ | Shift |
                         display-name = "Lower";
                         bindings = <
   &none       &kp UP     &none         &kp RALT      &kp TAB        &bt BT_SEL 0         &bt BT_SEL 1         &bt BT_SEL 2   &bt BT_SEL 3         &bt BT_SEL 4         
@@ -142,8 +142,8 @@
 //|  =  |  &  |  @  |  #  |  %  |      |  {  |  }  |  1  |  2  |  3  |
 //                  | TAB | ___ | SPACE | RET | 0 | BSPC |
                         display-name = "Raise";
-                        bindings = <
-  &kp PLUS         &dash_underscore      &kp ASTRK    &kp SLASH         &kp BACKSLASH        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp KP_NUMBER_7    &kp KP_NUMBER_8  &kp KP_NUMBER_9  
+                        bindings = < 
+  &kp PLUS         &dash_underscore      &kp KP_MULTIPLY    &kp SLASH         &kp BACKSLASH        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp KP_NUMBER_7    &kp KP_NUMBER_8  &kp KP_NUMBER_9  
   &kp EXCLAMATION  &kp QUESTION   &kp PIPE     &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp KP_NUMBER_4    &kp KP_NUMBER_5  &kp KP_NUMBER_6  
   &kp EQUAL        &kp AMPERSAND  &kp AT_SIGN  &kp HASH          &kp PERCENT          &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp KP_NUMBER_1    &kp KP_NUMBER_2  &kp KP_NUMBER_3  
                                        &kp TAB      &none             &kp SPACE            &kp RET               &kp N0                 &kp LC(BACKSPACE)
