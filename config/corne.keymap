@@ -83,7 +83,7 @@
             #binding-cells = <0>;
             tapping-term-ms = <200>;         // adjust if needed
             flavor = "tap-preferred";        // tap = comma
-            bindings = <&key_comma>, <&key_period>;
+            bindings = <&key_comma &key_period>;
         };
         dash_underscore: dash_underscore {
             compatible = "zmk,behavior-hold-tap";
@@ -91,7 +91,7 @@
             #binding-cells = <0>;
             tapping-term-ms = <200>;     // adjust to taste
             flavor = "tap-preferred";    // tap outputs dash
-            bindings = <&key_dash, <&key_underscore>;
+            bindings = <&key_dash &key_underscore>;
         };
     };
 
