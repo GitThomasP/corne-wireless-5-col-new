@@ -18,23 +18,29 @@
         zmk,physical-layout = &foostan_corne_5col_layout;
     };
 
-     behaviors {
 
-        comma_dot: comma_dot {
-            compatible = "zmk,behavior-hold-tap";
-            label = "CommaDot";
+    macros {
+        key_comma: key_comma {
+            compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;         // adjust if needed
-            flavor = "tap-preferred";        // tap = comma
-            bindings = <&kp COMMA>, <&kp PERIOD>;
+            bindings = <&kp COMMA>;
         };
-        dash_underscore: dash_underscore {
-            compatible = "zmk,behavior-hold-tap";
-            label = "DashUnderscore";
+
+        key_period: key_period {
+            compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;     // adjust to taste
-            flavor = "tap-preferred";    // tap outputs dash
-            bindings = <&kp MINUS>, <&kp UNDERSCORE>;
+            bindings = <&kp PERIOD>;
+        };
+        key_dash: key_dash {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS>;
+        };
+
+        key_underscore: key_underscore {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp UNDERSCORE>;
         };
         ctrl_c: ctrl_c {
             label = "CtrlC";
@@ -65,6 +71,27 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LG(D)>;
+        };
+    };
+
+
+     behaviors {
+
+        comma_dot: comma_dot {
+            compatible = "zmk,behavior-hold-tap";
+            label = "CommaDot";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;         // adjust if needed
+            flavor = "tap-preferred";        // tap = comma
+            bindings = <&key_comma>, <&key_period>;
+        };
+        dash_underscore: dash_underscore {
+            compatible = "zmk,behavior-hold-tap";
+            label = "DashUnderscore";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;     // adjust to taste
+            flavor = "tap-preferred";    // tap outputs dash
+            bindings = <&key_dash, <&key_underscore>;
         };
     };
 
