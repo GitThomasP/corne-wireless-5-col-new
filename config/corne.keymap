@@ -66,6 +66,10 @@
         };
     };
 
+    &uc {
+  default-mode = <UC_MODE_WIN_COMPOSE>;  // Replace with desired input system.
+};
+
 
         keymap {
                 compatible = "zmk,keymap";
