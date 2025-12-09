@@ -104,7 +104,7 @@
                         bindings = <
  &kp Q  &kp W  &kp E      &kp R  &kp T        &kp Y    &kp U  &kp I          &kp O    &kp P         
  &kp A  &kp S  &kp D      &kp F  &kp G        &kp H    &kp J  &kp K          &kp L    &uc 0xE5 0xC5    
- &kp Z  &kp X  &kp C      &kp V  &kp B        &kp N    &kp M  &uc 0xE6 0xC6       &uc 0xF8 0xD8   &cd COMMA DOT
+ &kp Z  &kp X  &kp C      &kp V  &kp B        &kp N    &kp M  &uc 0xE6 0xC6       &uc 0xF8 0xD8   &cd DOT COMMA
                      &kp LEFT_SHIFT  &mo 2  &kp SPACE    &kp RET  &mo 1  &kp BACKSPACE
                         >;  
                 }; 
@@ -126,7 +126,7 @@
 
                 raise_layer {
                         // -----------------------------------------------------------------------------------------
-//|  +  |  -  |  *  |  /  |  \  |      |  (  |  )  |  7  |  8  |  9  |
+//|  +  |  -  |  *  |  /  |  \  |      |  (  |  )  |  7  |  8  |  9  | 
 //|  !  |  ?  |  |  |  '  |  "  |      |  [  |  ]  |  4  |  5  |  6  |
 //|  =  |  &  |  @  |  #  |  %  |      |  {  |  }  |  1  |  2  |  3  |
 //                  | TAB | ___ | SPACE | RET | 0 | BSPC |
