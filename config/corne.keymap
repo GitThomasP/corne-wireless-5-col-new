@@ -132,7 +132,7 @@
 //                  | TAB | ___ | SPACE | RET | 0 | BSPC |
                         display-name = "Raise";
                         bindings = < 
-  &kp PLUS         &ud MINUS UNDERSCORE     &kp KP_MULTIPLY    &kp SLASH         &kp BACKSLASH        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp KP_NUMBER_7    &kp KP_NUMBER_8  &kp KP_NUMBER_9  
+  &kp PLUS         &du MINUS UNDERSCORE     &kp KP_MULTIPLY    &kp SLASH         &kp BACKSLASH        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp KP_NUMBER_7    &kp KP_NUMBER_8  &kp KP_NUMBER_9  
   &kp EXCLAMATION  &kp QUESTION   &kp PIPE     &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp KP_NUMBER_4    &kp KP_NUMBER_5  &kp KP_NUMBER_6  
   &kp EQUAL        &kp AMPERSAND  &kp AT_SIGN  &kp HASH          &kp PERCENT          &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp KP_NUMBER_1    &kp KP_NUMBER_2  &kp KP_NUMBER_3  
                                        &kp TAB      &none             &kp SPACE            &kp RET               &kp N0                 &kp LC(BACKSPACE)
