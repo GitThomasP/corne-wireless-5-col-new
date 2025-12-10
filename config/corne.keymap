@@ -73,6 +73,18 @@
             #binding-cells = <0>;
             bindings = <&kp LC(F5)>;
         };
+        ctrl_p: ctrl_p {
+            label = "CtrlP";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(P)>;
+        };
+        ctrl_f: ctrl_f {
+            label = "CtrlF";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(F)>;
+        };
     };
 
 
@@ -106,6 +118,7 @@
 //|  A  |  S  |  D  |  F  |  G  |      |  H  |  J  |  K  |  L  |  å   |
 //|  Z  |  X  |  C  |  V  |  B  |      |  N  |  M  |  æ  |  ø  |  ,   |
 //                 | Shift | L2 | Space | Enter | L1 | Bksp |
+
                         display-name = "Base";
                         bindings = <
  &kp Q  &kp W  &kp E      &kp R  &kp T        &kp Y    &kp U  &kp I          &kp O    &kp P         
@@ -115,33 +128,37 @@
                         >;  
                 }; 
 
+
                 lower_layer {
 // -----------------------------------------------------------------------------------------
-//| ___ |  ↑  | ___ | RAlt |  Tab |   BT0  |   BT1  |   BT2  |   BT3  |   BT4  |
-//|  ←  |  ↓  |  →  | ___  | Ctrl-S |  ___ |  ___ |  ___ |  ___ |  ___ |
-//| Del | Ctrl-A | Ctrl-C | Ctrl-V | Win-D | Win-L | ___ | ___ | F5 | CTRL-F5 |
-//                    | GUI | TOG3 | Space | Enter | ___ | Shift |
+//| ___ |  ↑  | ___ | RAlt |  Tab |   BT0  |      |   BT1  |   BT2  |   BT3  |   BT4  |
+//|  ←  |  ↓  |  →  | ___  | Ctrl-S |  ___ |      |  ___ |  ___ |  ___ |  ___ |
+//| Del | Ctrl-A | Ctrl-C | Ctrl-V | Win-D |      | Win-L | F2 | CTRL-F | F5 | CTRL-F5 |
+//                    | GUI | TOG3 | Space |      | Enter | ___ | Shift |
+
                         display-name = "Lower";
                         bindings = <
-  &none       &kp UP     &none         &kp RALT      &kp TAB        &bt BT_SEL 0         &bt BT_SEL 1         &bt BT_SEL 2   &bt BT_SEL 3         &bt BT_SEL 4         
-  &kp LEFT    &kp DOWN   &kp RIGHT     &none      &ctrl_s       &none         &none      &none   &kp F5       &ctrl_f5         
-  &kp DELETE  &ctrl_a  &ctrl_c     &ctrl_v  &win_d    &win_l &none  &none   &none  &none 
-                              &kp LEFT_GUI  &tog 3     &kp SPACE    &kp RET       &none         &kp LSHFT
+  &none       &kp UP     &none         &kp RALT   &kp TAB           &bt BT_SEL 0   &bt BT_SEL 1     &bt BT_SEL 2   &bt BT_SEL 3     &bt BT_SEL 4         
+  &kp LEFT    &kp DOWN   &kp RIGHT     &none      &ctrl_s           &kp F2         &ctrl_f          &ctrl_p        &kp F5           &ctrl_f5         
+  &kp DELETE  &ctrl_a    &ctrl_c       &ctrl_v    &win_d            &win_l         &none            &none          &none            &none 
+                         &kp LEFT_GUI  &tog 3     &kp SPACE         &kp RET        &none            &kp LSHFT
                         >;
                 };
 
+
                 raise_layer {
-                        // -----------------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------------
 //|  +  |  -  |  *  |  /  |  \  |      |  (  |  )  |  7  |  8  |  9  | 
 //|  !  |  ?  |  |  |  '  |  "  |      |  [  |  ]  |  4  |  5  |  6  |
 //|  =  |  &  |  @  |  #  |  %  |      |  {  |  }  |  1  |  2  |  3  |
 //                  | TAB | ___ | SPACE | RET | 0 | BSPC |
+
                         display-name = "Raise";
                         bindings = < 
-  &kp PLUS         &du MINUS UNDERSCORE     &kp KP_MULTIPLY    &kp SLASH         &kp BACKSLASH        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp KP_NUMBER_7    &kp KP_NUMBER_8  &kp KP_NUMBER_9  
-  &kp EXCLAMATION  &kp QUESTION   &kp PIPE     &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp KP_NUMBER_4    &kp KP_NUMBER_5  &kp KP_NUMBER_6  
-  &kp EQUAL        &kp AMPERSAND  &kp AT_SIGN  &kp HASH          &kp PERCENT          &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp KP_NUMBER_1    &kp KP_NUMBER_2  &kp KP_NUMBER_3  
-                                       &kp TAB      &none             &kp SPACE            &kp RET               &kp N0                 &kp LC(BACKSPACE)
+  &kp PLUS         &du MINUS UNDERSCORE     &kp KP_MULTIPLY    &kp SLASH         &kp BACKSLASH              &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp KP_NUMBER_7    &kp KP_NUMBER_8  &kp KP_NUMBER_9  
+  &kp EXCLAMATION  &kp QUESTION             &kp PIPE           &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES          &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp KP_NUMBER_4    &kp KP_NUMBER_5  &kp KP_NUMBER_6  
+  &kp EQUAL        &kp AMPERSAND            &kp AT_SIGN        &kp HASH          &kp PERCENT                &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp KP_NUMBER_1    &kp KP_NUMBER_2  &kp KP_NUMBER_3  
+                                            &kp TAB            &none             &kp SPACE                  &kp RET               &kp N0                 &kp LC(BACKSPACE)
                         >;
                 };
 
