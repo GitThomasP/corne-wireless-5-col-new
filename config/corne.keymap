@@ -117,7 +117,7 @@
 //|  Q  |  W  |  E  |  R  |  T  |      |  Y  |  U  |  I  |  O  |  P   |
 //|  A  |  S  |  D  |  F  |  G  |      |  H  |  J  |  K  |  L  |  å   |
 //|  Z  |  X  |  C  |  V  |  B  |      |  N  |  M  |  æ  |  ø  |  ,   |
-//                 | Shift | L2 | Space | Enter | L1 | Bksp |
+//         | Shift | L2 | Space |      | Enter | L1 | Bksp |
 
                         display-name = "Base";
                         bindings = <
@@ -131,10 +131,10 @@
 
                 lower_layer {
 // -----------------------------------------------------------------------------------------
-//| ___ |  ↑  | ___ | RAlt |  Tab |   BT0  |      |   BT1  |   BT2  |   BT3  |   BT4  |
-//|  ←  |  ↓  |  →  | ___  | Ctrl-S |  ___ |      |  ___ |  ___ |  ___ |  ___ |
-//| Del | Ctrl-A | Ctrl-C | Ctrl-V | Win-D |      | Win-L | F2 | CTRL-F | F5 | CTRL-F5 |
-//                    | GUI | TOG3 | Space |      | Enter | ___ | Shift |
+//| ___ |   ↑    |   ___    |   RAlt |  Tab   |      |  BT0  | BT1 |   BT2  |  BT3  |   BT4   |
+//|  ←  |   ↓    |    →     |   ___  | Ctrl-S |      |  ___  | ___ |   ___  |   ___ |  ___    |
+//| Del | Ctrl-A | Ctrl-C   | Ctrl-V | Win-D  |      | Win-L |  F2 | CTRL-F |   F5  | CTRL-F5 |
+//                    | GUI |   TOG3 | Space  |      | Enter | ___ |  Shift |
 
                         display-name = "Lower";
                         bindings = <
