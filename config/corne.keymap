@@ -43,6 +43,12 @@
             #binding-cells = <0>;
             bindings = <&kp LC(V)>;
         };
+        ctrl_x: ctrl_x {
+            label = "CtrlX";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(X)>;
+        };
         ctrl_a: ctrl_a {
             label = "CtrlA";
             compatible = "zmk,behavior-macro";
@@ -131,17 +137,17 @@
 
                 lower_layer {
 // -----------------------------------------------------------------------------------------
-//| ___ |   ↑    |   ___    |   RAlt |  Tab   |      |  BT0  | BT1 |   BT2  |  BT3  |   BT4   |
-//|  ←  |   ↓    |    →     |   ___  | Ctrl-S |      |  ___  | ___ |   ___  |   ___ |  ___    |
-//| Del | Ctrl-A | Ctrl-C   | Ctrl-V | Win-D  |      | Win-L |  F2 | CTRL-F |   F5  | CTRL-F5 |
-//                    | GUI |   TOG3 | Space  |      | Enter | ___ |  Shift |
+//| ___ |   ↑    |   ___    |   RAlt |  Tab   |      |  BT0  | BT1    |   BT2  |  BT3   |   BT4    |
+//|  ←  |   ↓    |    →     |   ___  | Ctrl-S |      |  F2   | Ctrl-F | Ctrl-P |   F5   |  CTRL-F5 |
+//| Del | Ctrl-A | Ctrl-X   | Ctrl-C | Ctrl-V |      | Win-L |  Win-D |  ___   |   ___  |   ESC    |
+//                    | GUI |   TOG3 | Space  |      | Enter |  ___   |  Shift |
 
                         display-name = "Lower";
                         bindings = <
   &none       &kp UP     &none         &kp RALT   &kp TAB           &bt BT_SEL 0   &bt BT_SEL 1     &bt BT_SEL 2   &bt BT_SEL 3     &bt BT_SEL 4         
   &kp LEFT    &kp DOWN   &kp RIGHT     &none      &ctrl_s           &kp F2         &ctrl_f          &ctrl_p        &kp F5           &ctrl_f5         
-  &kp DELETE  &ctrl_a    &ctrl_c       &ctrl_v    &win_d            &win_l         &none            &none          &none            &kp ESC 
-                         &kp LEFT_GUI  &tog 3     &kp SPACE         &kp RET        &none            &kp LSHFT
+  &kp DELETE  &ctrl_a    &ctrl_x       &ctrl_c    &ctrl_v           &win_l         &win_d           &none          &none            &kp ESC 
+                         &kp LEFT_GUI  &tog 3     &kp SPACE         &kp LCTRL        &none            &kp LSHFT
                         >;
                 };
 
