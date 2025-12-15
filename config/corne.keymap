@@ -123,7 +123,7 @@
 //|  Q  |  W  |  E  |  R  |  T  |      |  Y  |  U  |  I  |  O  |  P   |
 //|  A  |  S  |  D  |  F  |  G  |      |  H  |  J  |  K  |  L  |  å   |
 //|  Z  |  X  |  C  |  V  |  B  |      |  N  |  M  |  æ  |  ø  |  ,   |
-//         | Shift | L2 | Space |      | Enter | L1 | Bksp |
+//         | Shift | L2 | Space |      | Enter | L1 | BSPC |
 
                         display-name = "Base";
                         bindings = <
@@ -140,7 +140,7 @@
 //| ___ |   ↑    |   ___    |   RAlt |  Tab   |      |  BT0  | BT1    |   BT2  |  BT3   |   BT4    |
 //|  ←  |   ↓    |    →     |   ___  | Ctrl-S |      |  F2   | Ctrl-F | Ctrl-P |   F5   |  CTRL-F5 |
 //| Del | Ctrl-A | Ctrl-X   | Ctrl-C | Ctrl-V |      | Win-L |  Win-D |  ___   |   ___  |   ESC    |
-//                    | GUI |   TOG3 | Space  |      | Enter |  ___   |  Shift |
+//                    | GUI |   TOG3 | Space  |      | LCTRL |  ___   |  Shift |
 
                         display-name = "Lower";
                         bindings = <
@@ -157,7 +157,7 @@
 //|  +  |  -  |  *  |  /  |  \  |      |  (  |  )  |  7  |  8  |  9  | 
 //|  !  |  ?  |  |  |  '  |  "  |      |  [  |  ]  |  4  |  5  |  6  |
 //|  =  |  &  |  @  |  #  |  %  |      |  {  |  }  |  1  |  2  |  3  |
-//                  | TAB | ___ | SPACE | RET | 0 | BSPC |
+//                  | TAB | ___ | SPACE | RET | 0  |CBSPC|
 
                         display-name = "Raise";
                         bindings = < 
