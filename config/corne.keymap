@@ -91,26 +91,30 @@
             #binding-cells = <0>;
             bindings = <&kp LC(F)>;
         };
+        ctrl_z: ctrl_z {
+            label = "CtrlZ";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(Z)>;
+        };
+        ctrl_y: ctrl_y {
+            label = "CtrlY";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(Y)>;
+        };
     };
 
 
      behaviors {
 
-        cd: comma_dot {
+        ht: hold_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";  
             tapping-term-ms = <200>;         
             bindings = <&kp>, <&kp>;
-            display-name = "Comma-Dot";
-        };
-        du: dash_underscore {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";    // tap outputs dash
-            tapping-term-ms = <200>;     // adjust to taste
-            bindings = <&key_underscore &key_dash>;
-            display-name = "Dash-Underscore";
+            display-name = "Hold-Tap";
         };
     };
 
@@ -129,7 +133,7 @@
                         bindings = <
  &kp Q  &kp W  &kp E      &kp R  &kp T        &kp Y    &kp U  &kp I          &kp O    &kp P         
  &kp A  &kp S  &kp D      &kp F  &kp G        &kp H    &kp J  &kp K          &kp L    &uc 0xE5 0xC5    
- &kp Z  &kp X  &kp C      &kp V  &kp B        &kp N    &kp M  &uc 0xE6 0xC6       &uc 0xF8 0xD8   &cd DOT COMMA
+ &kp Z  &kp X  &kp C      &kp V  &kp B        &kp N    &kp M  &uc 0xE6 0xC6       &uc 0xF8 0xD8   &ht DOT COMMA
                      &kp LEFT_SHIFT  &mo 2  &kp SPACE    &kp RET  &mo 1  &kp BACKSPACE
                         >;  
                 }; 
@@ -144,9 +148,9 @@
 
                         display-name = "Lower";
                         bindings = <
-  &none       &kp UP     &none         &kp RALT   &kp TAB           &bt BT_SEL 0   &bt BT_SEL 1     &bt BT_SEL 2   &bt BT_SEL 3     &bt BT_SEL 4         
-  &kp LEFT    &kp DOWN   &kp RIGHT     &none      &ctrl_s           &kp F2         &ctrl_f          &ctrl_p        &kp F5           &ctrl_f5         
-  &kp DELETE  &ctrl_a    &ctrl_x       &ctrl_c    &ctrl_v           &win_l         &win_d           &none          &none            &kp ESC 
+  &none       &kp UP     &none         &kp LALT   &kp TAB           &bt BT_SEL 0   &bt BT_SEL 1     &bt BT_SEL 2   &bt BT_SEL 3     &bt BT_SEL 4         
+  &kp LEFT    &kp DOWN   &kp RIGHT     &ctrl_a      &ctrl_s           &kp F2         &ctrl_f          &ctrl_p        &kp F5           &ctrl_f5         
+  &ctrl_z     &ctrl_y    &ctrl_x       &ctrl_c    &ctrl_v           &win_l         &win_d           &none          &kp DELETE       &kp ESC 
                          &kp LEFT_GUI  &tog 3     &kp SPACE         &kp LCTRL        &none            &kp LSHFT
                         >;
                 };
@@ -161,8 +165,8 @@
 
                         display-name = "Raise";
                         bindings = < 
-  &kp PLUS         &du MINUS UNDERSCORE     &kp KP_MULTIPLY    &kp SLASH         &kp BACKSLASH              &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp KP_NUMBER_7    &kp KP_NUMBER_8  &kp KP_NUMBER_9  
-  &kp EXCLAMATION  &kp QUESTION             &kp PIPE           &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES          &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp KP_NUMBER_4    &kp KP_NUMBER_5  &kp KP_NUMBER_6  
+  &kp PLUS         &ht UNDERSCORE MINUS     &kp PIPE    &kp SLASH         &kp BACKSLASH              &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp KP_NUMBER_7    &kp KP_NUMBER_8  &kp KP_NUMBER_9  
+  &kp KP_MULTIPLY  &ht QUESTION  EXCLAMATION           &ht [Greater than] [Less than]            &ht SEMICOLON COLON   &ht DOUBLE_QUOTES  SINGLE_QUOTE        &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp KP_NUMBER_4    &kp KP_NUMBER_5  &kp KP_NUMBER_6  
   &kp EQUAL        &kp AMPERSAND            &kp AT_SIGN        &kp HASH          &kp PERCENT                &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp KP_NUMBER_1    &kp KP_NUMBER_2  &kp KP_NUMBER_3  
                                             &kp TAB            &none             &kp SPACE                  &kp RET               &kp N0                 &kp LC(BACKSPACE)
                         >;
