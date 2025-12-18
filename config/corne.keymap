@@ -163,10 +163,10 @@
 //|  =  |  &  |  @  |  #  |  %  |      |  {  |  }  |  1  |  2  |  3  |
 //                  | TAB | ___ | SPACE | RET | 0  |CBSPC|
 
-                        display-name = "Raise";
+                        display-name = "Raise;/\======|-+-|+-|==|
                         bindings = < 
-  &kp PLUS         &ht UNDERSCORE MINUS     &kp PIPE    &kp EQUAL         &ht BACKSLASH  SLASH            &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp KP_NUMBER_7    &kp KP_NUMBER_8  &kp KP_NUMBER_9  
-  &kp KP_MULTIPLY  &ht QUESTION  EXCLAMATION   &ht LT GT            &ht COLON SEMICOLON  &ht DOUBLE_QUOTES  SINGLE_QUOTE        &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp KP_NUMBER_4    &kp KP_NUMBER_5  &kp KP_NUMBER_6  
+  &kp PLUS         &ht UNDERSCORE MINUS     &kp PIPE    &kp KP_MULTIPLY         &ht BACKSLASH  SLASH            &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp KP_NUMBER_7    &kp KP_NUMBER_8  &kp KP_NUMBER_9  
+  &kp EQUAL  &ht QUESTION  EXCLAMATION   &ht LT GT            &ht COLON SEMICOLON  &ht DOUBLE_QUOTES  SINGLE_QUOTE        &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp KP_NUMBER_4    &kp KP_NUMBER_5  &kp KP_NUMBER_6  
   &kp DOLLAR        &kp AMPERSAND            &kp AT_SIGN        &kp HASH          &kp PERCENT                &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp KP_NUMBER_1    &kp KP_NUMBER_2  &kp KP_NUMBER_3  
                                             &kp TAB            &none             &kp SPACE                  &kp RET               &kp N0                 &kp LC(BACKSPACE)
                         >;
